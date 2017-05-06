@@ -28,9 +28,6 @@ WORKDIR /var/jenkins_home
 
 RUN chown -R jenkins:jenkins /var/jenkins_home
 
-VOLUME /var/run/docker.sock
-
 ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
 
 RUN mkdir /usr/share/jenkins/ref/plugins
-
